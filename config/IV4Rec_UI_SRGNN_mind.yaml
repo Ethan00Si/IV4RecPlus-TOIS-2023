@@ -1,0 +1,38 @@
+lr: 0.00001
+min_lr: 0.00001
+patience: 5 #Number of epochs with no improvement after which learning rate will be reduced
+es_patience: 5 #patience for early stop
+n_node: 130382
+hiddenSize: 64
+nonhybrid: 0
+dropout_rate: 0.2
+step: 1
+num_blocks: 2
+num_heads: 1
+item_dim: 768
+l2 : 0.00001
+weight_decay: 0.0
+IV_NET:
+  qry_dim: 768
+  rec_item_dim: 64
+  att_query_dim: 768
+
+  dropout: 0.1
+  hid_units: [512, 272, 64]
+  num_heads : 8
+  src_his_step: 50
+  dense: 400
+  lambda: 0.3  #
+  item_IV_NET:
+    hid_units: [ 128, 64 ]
+    dropout: 0.1
+
+    lambda: 0.5
+
+Agg:
+  input_dim: 128
+  hid_units: [1]
+
+item_Agg:
+  input_dim: 128
+  hid_units: [1]
